@@ -1,0 +1,18 @@
+import random
+import winsound
+import sys
+freq=440
+duration=10000
+while(True):
+    temperature=random.randint(10,100)
+    humidity=random.randint(10,100)
+    print("Current Temperature=",temperature)
+    print("Current Humidity=",humidity,'%')
+    stable_temprature=37
+    stable_humidity=45
+    if temperature>stable_temprature and humidity>stable_humidity:
+        print("High Temperature BEEP ALARM")
+        winsound.Beep(freq,duration)
+    else:
+        print("Everything Fine NO ALARM")
+    sys.exit(100)
